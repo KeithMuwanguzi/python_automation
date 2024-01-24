@@ -10,5 +10,6 @@ soup = BeautifulSoup(res.text,'html.parser')
     
 methods = soup.findAll('dl',attrs={'class':'py method'})
 
+
 for method in methods:
     print(method.text)
