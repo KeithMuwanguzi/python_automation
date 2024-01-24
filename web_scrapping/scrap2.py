@@ -9,10 +9,15 @@ def scrapAllHTMLContents(url):
         content = res.content
         soup = BeautifulSoup(content,'html.parser')
         
-        data = soup.prettify()
-        with open('web.html','w') as des:
-            des.write(str(data))
-        print("Data Scrapped")
+        # data = soup.prettify()
+        # with open('web.html','w') as des:
+        #     des.write(str(data))
+        # print("Data Scrapped")
+        
+        text_data = soup.get_text()
+        with open('text2.txt','w') as text_doc:
+            text_doc.write(text_data)
+        print("Text scapped")
     else:
         print("No access to scrap this site")
         
