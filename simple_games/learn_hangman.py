@@ -19,7 +19,9 @@ def display_word(word,guessed_letters):
             display += '_'
     return display
 
-def in_game(word, guessed_letters):
+def in_game():
+    guessed_letters = []
+    word = choose_word()
     times = 1
     while times <= 7:
         print(f'\nGuessed:  {display_word(word,guessed_letters)}')
@@ -49,13 +51,10 @@ def in_game(word, guessed_letters):
     print('\nDo you want to play again? (yes/no):')
     choice = input('>>>')
     if choice.lower() == 'yes' or choice.lower() == 'y':
-        in_game(word,guessed_letters)
+        in_game()
 
 
 def play_game():
-    guessed_letters = []
-    word = choose_word()
-
     print('''
           
 
@@ -75,7 +74,7 @@ Start Playing......................Enjoy
 ''')  
     
     time.sleep(3)
-    in_game(word,guessed_letters)
+    in_game()
     
 
     
