@@ -1,10 +1,7 @@
 import random
 
 def choose_word():
-    # List of words to choose from
     words = ["python", "hangman", "programming", "computer", "game", "code", "algorithm"]
-
-    # Choose a random word from the list
     return random.choice(words)
 
 def display_word(word, guessed_letters):
