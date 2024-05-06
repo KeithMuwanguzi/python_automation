@@ -33,7 +33,10 @@ for file in files:
         folder = files_split[1] + ' files'
         extension = '.' + files_split[1]
         
-        if extension in file and not os.path.exists(path + folder + '/' + file):
-            shutil.move(path + file,path + folder + '/' + file)
+        if extension in file:
+            if not os.path.exists(path + folder + '/' + file):
+                shutil.move(path + file,path + folder + '/' + file)
+            else:
+                print(f'{file} already exists in {folder}')
 print("Files moved successfully")
 
