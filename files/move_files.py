@@ -1,6 +1,6 @@
 import os, shutil
 
-path = r'D:/Class/'
+path = r'D/pc/personals/'
 
 files = os.listdir(path)
 
