@@ -1,6 +1,6 @@
 import os, shutil
 
-path = r'D:/Class/'
+path = r'D:/CodeExpp/'
 
 files = os.listdir(path)
 
